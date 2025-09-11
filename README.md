@@ -40,7 +40,7 @@ All encryption happens locally within your browser extension, ensuring that even
 git clone <repository_url>
 ```
 
-### 2. Load Extension in Browser {#load-extension-in-browser .unnumbered}
+### 2. Load Extension in Browser 
 
 **Chrome:**
 
@@ -66,12 +66,7 @@ git clone <repository_url>
 
 ### 🧩 Architecture 
 
-<figure>
-
-<figcaption>TinyVault Browser Extension Architecture</figcaption>
-</figure>
-
-## Components {#components .unnumbered}
+## Components 
 
 -   **popup.js / popup.html**: Handles the vault UI and user
     interactions
