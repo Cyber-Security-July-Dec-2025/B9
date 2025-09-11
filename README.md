@@ -31,6 +31,14 @@ All encryption happens locally within your browser extension, ensuring that even
   - Auto-fill in browser: detects login forms and can auto-fill usernames/passwords for stored sites. *(Not included in current version)*  
 
 ---
+## Glimpse
+<img width="523" height="318" alt="Screenshot 2025-09-11 134309" src="https://github.com/user-attachments/assets/3cd60eaf-d507-4858-8408-22295cccbf3d" />
+
+
+<img width="607" height="279" alt="Screenshot 2025-09-11 134321" src="https://github.com/user-attachments/assets/8efe0e1e-dd78-41d5-9169-04dd2bba663b" />
+
+
+<img width="566" height="809" alt="Screenshot 2025-09-11 134338" src="https://github.com/user-attachments/assets/7f1dae8e-ea8c-484b-ac2b-a3bf6361aeab" />
 
 ## 🛠 Installation & Setup 
 
