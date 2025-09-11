@@ -64,7 +64,7 @@ git clone <repository_url>
 
 3.  Start adding and managing credentials
 
-### 🧩 Architecture 
+# 🧩 Architecture 
 
 ## Components 
 
@@ -114,7 +114,7 @@ git clone <repository_url>
 
 4.  Use the Lock button to secure the vault immediately
 
-# 🔒 Security & Best Practices {#security-best-practices .unnumbered}
+# 🔒 Security & Best Practices 
 
 -   **Local Encryption Only**: All sensitive data is encrypted locally;
     nothing leaves your browser
@@ -128,8 +128,7 @@ git clone <repository_url>
 -   **Auto-lock**: Automatically locks the vault after inactivity to
     prevent unauthorized access
 
-# 📂 File Structure {#file-structure .unnumbered}
-
+# 📂 File Structure
     TinyVault/
     ├── manifest.json        # Browser extension configuration
     ├── popup.html           # Vault UI
