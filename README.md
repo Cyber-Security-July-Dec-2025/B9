@@ -31,48 +31,57 @@ All encryption happens locally within your browser extension, ensuring that even
   - Auto-fill in browser: detects login forms and can auto-fill usernames/passwords for stored sites. *(Not included in current version)*  
 
 ---
-
-## 🖼 Glimpse
-
-![Vault Screenshot 1](Screenshot_2025-09-11_134309.png)  
-![Vault Screenshot 2](Screenshot_2025-09-11_134321.png)  
-![Vault Screenshot 3](Screenshot_2025-09-11_134338.png)  
-
----
+ 
 
 
 ## 🛠 Installation & Setup
 
-  Clone the Repository
-  git clone <repository_url>
-  Load Extension in Browser
+  That's my mistake, I apologize. I'll make sure to use the correct Markdown formatting this time. Here is the .md file content with proper headings and structure.
 
-### Chrome:
+TinyVault: A Simple, Secure, & Local Password Manager
 
-Navigate to chrome://extensions/
-Enable Developer Mode
-Click Load unpacked → select the project folder
+TinyVault is a lightweight browser extension that lets you securely store and manage your passwords right in your browser. All data is encrypted locally, ensuring your sensitive information never leaves your device.
 
-### Firefox:
+🛠 Installation & Setup
 
-Navigate to about:debugging#/runtime/this-firefox
-Click Load Temporary Add-on → select manifest.json
+    Clone the Repository
+    Bash
 
-### First-Time Setup
+    git clone <repository_url>
 
-Click the TinyVault icon in the browser toolbar
-Set your Master Password
-Start adding and managing credentials
+    Load Extension in Browser
+
+    Chrome:
+
+        Navigate to chrome://extensions/
+
+        Enable Developer Mode
+
+        Click Load unpacked → select the project folder
+
+    Firefox:
+
+        Navigate to about:debugging#/runtime/this-firefox
+
+        Click Load Temporary Add-on → select manifest.json
+
+    First-Time Setup
+
+        Click the TinyVault icon in the browser toolbar
+
+        Set your Master Password
+
+        Start adding and managing credentials
 
 🧩 Architecture
 
 Code snippet
 
-graph LR
-A[Browser Extension UI] --> B[popup.js / popup.html]
-B --> C[sw.js / crypto.js]
-C --> D[IndexedDB (Encrypted Vault)]
-B --> E[Password Generator]
+    graph LR
+    A[Browser Extension UI] --> B[popup.js / popup.html]
+    B --> C[sw.js / crypto.js]
+    C --> D[IndexedDB (Encrypted Vault)]
+    B --> E[Password Generator]
 
     popup.js / popup.html: Handles the vault UI and user interactions.
 
@@ -141,3 +150,4 @@ TinyVault/
 ├── idb.js                # IndexedDB wrapper
 ├── icons/                # Extension icons (16, 48, 128px)
 └── screenshots/          # Demo screenshots
+
