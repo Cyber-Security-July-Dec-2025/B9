@@ -32,15 +32,15 @@ All encryption happens locally within your browser extension, ensuring that even
 
 ---
 
-## 🛠 Installation & Setup {#installation-setup .unnumbered}
+## 🛠 Installation & Setup 
 
-## 1. Clone the Repository {#clone-the-repository .unnumbered}
+### 1. Clone the Repository 
 
 ``` {.bash language="bash"}
 git clone <repository_url>
 ```
 
-## 2. Load Extension in Browser {#load-extension-in-browser .unnumbered}
+### 2. Load Extension in Browser {#load-extension-in-browser .unnumbered}
 
 **Chrome:**
 
@@ -56,7 +56,7 @@ git clone <repository_url>
 
 2.  Click **Load Temporary Add-on** → select `manifest.json`
 
-## 3. First-Time Setup {#first-time-setup .unnumbered}
+### 3. First-Time Setup 
 
 1.  Click the TinyVault icon in the browser toolbar
 
@@ -64,7 +64,7 @@ git clone <repository_url>
 
 3.  Start adding and managing credentials
 
-# 🧩 Architecture {#architecture .unnumbered}
+### 🧩 Architecture 
 
 <figure>
 
@@ -86,32 +86,30 @@ git clone <repository_url>
 
 -   **Password Generator**: Generates strong random passwords
 
-# 💻 Tech Stack {#tech-stack .unnumbered}
+## 💻 Tech Stack 
 
-## Frontend (Browser Extension UI) {#frontend-browser-extension-ui .unnumbered}
+### Frontend (Browser Extension UI)
 
 -   Popup UI: Unlock vault, search, and add credentials
 
--   Options Page: Settings like theme or sync options
-
 -   Content Script (optional): Detects login forms for auto-fill
 
--   Background Script / Service Worker: Maintains vault state, handles
+-   Service Worker: Maintains vault state, handles
     encryption requests
 
-## Storage {#storage .unnumbered}
+### Storage 
 
 -   Local: IndexedDB for storing encrypted credentials
 
-## Security {#security .unnumbered}
+### Security 
 
 -   AES-256-GCM encryption
 
--   Key derivation using PBKDF2 / Argon2 / scrypt
+-   Key derivation using PBKDF2 
 
 -   Auto-lock and manual lock features
 
-# 🚀 Usage {#usage .unnumbered}
+### 🚀 Usage
 
 1.  Unlock the vault with your **Master Password**
 
