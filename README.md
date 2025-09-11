@@ -34,9 +34,7 @@ All encryption happens locally within your browser extension, ensuring that even
  
 
 
-## 🛠 Installation & Setup
-
-  That's my mistake, I apologize. I'll make sure to use the correct Markdown formatting this time. Here is the .md file content with proper headings and structure.
+That's what I've been aiming for, and I apologize for the previous attempts. You can directly copy and paste the text below into a .md file, and it will render correctly.
 
 TinyVault: A Simple, Secure, & Local Password Manager
 
@@ -77,11 +75,11 @@ TinyVault is a lightweight browser extension that lets you securely store and ma
 
 Code snippet
 
-    graph LR
-    A[Browser Extension UI] --> B[popup.js / popup.html]
-    B --> C[sw.js / crypto.js]
-    C --> D[IndexedDB (Encrypted Vault)]
-    B --> E[Password Generator]
+graph LR
+A[Browser Extension UI] --> B[popup.js / popup.html]
+B --> C[sw.js / crypto.js]
+C --> D[IndexedDB (Encrypted Vault)]
+B --> E[Password Generator]
 
     popup.js / popup.html: Handles the vault UI and user interactions.
 
@@ -150,4 +148,3 @@ TinyVault/
 ├── idb.js                # IndexedDB wrapper
 ├── icons/                # Extension icons (16, 48, 128px)
 └── screenshots/          # Demo screenshots
-
