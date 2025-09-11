@@ -1,4 +1,4 @@
-<img width="523" height="318" alt="Screenshot 2025-09-11 134309" src="https://github.com/user-attachments/assets/5242cb41-b8f0-4fad-800b-3c5f95349b0d" /># Password Manager Web-App with Browser Extension
+# Password Manager Web-App with Browser Extension
 
 ## Description
 A secure password manager that allows users to safely store and retrieve passwords for websites and applications.  
