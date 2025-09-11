@@ -40,6 +40,13 @@ All encryption happens locally within your browser extension, ensuring that even
 
 <img width="566" height="809" alt="Screenshot 2025-09-11 134338" src="https://github.com/user-attachments/assets/7f1dae8e-ea8c-484b-ac2b-a3bf6361aeab" />
 
+## Group Members
+1. Sneha Rastogi (IIT2023154)
+2. Manas Sahu (IIT2023190)
+3. Arjun Rai (IIT2023174)
+4. Faizan Ali (IIT2023192)
+5. Ritik Jain (IIT2023130)
+
 ## 🛠 Installation & Setup 
 
 ### 1. Clone the Repository 
