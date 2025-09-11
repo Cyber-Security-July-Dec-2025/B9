@@ -31,120 +31,120 @@ All encryption happens locally within your browser extension, ensuring that even
   - Auto-fill in browser: detects login forms and can auto-fill usernames/passwords for stored sites. *(Not included in current version)*  
 
 ---
- 
 
+## 🛠 Installation & Setup {#installation-setup .unnumbered}
 
-That's what I've been aiming for, and I apologize for the previous attempts. You can directly copy and paste the text below into a .md file, and it will render correctly.
+## 1. Clone the Repository {#clone-the-repository .unnumbered}
 
-TinyVault: A Simple, Secure, & Local Password Manager
+``` {.bash language="bash"}
+git clone <repository_url>
+```
 
-TinyVault is a lightweight browser extension that lets you securely store and manage your passwords right in your browser. All data is encrypted locally, ensuring your sensitive information never leaves your device.
+## 2. Load Extension in Browser {#load-extension-in-browser .unnumbered}
 
-🛠 Installation & Setup
+**Chrome:**
 
-    Clone the Repository
-    Bash
+1.  Navigate to `chrome://extensions/`
 
-    git clone <repository_url>
+2.  Enable Developer Mode
 
-    Load Extension in Browser
+3.  Click **Load unpacked** → select the project folder
 
-    Chrome:
+**Firefox:**
 
-        Navigate to chrome://extensions/
+1.  Navigate to `about:debugging#/runtime/this-firefox`
 
-        Enable Developer Mode
+2.  Click **Load Temporary Add-on** → select `manifest.json`
 
-        Click Load unpacked → select the project folder
+## 3. First-Time Setup {#first-time-setup .unnumbered}
 
-    Firefox:
+1.  Click the TinyVault icon in the browser toolbar
 
-        Navigate to about:debugging#/runtime/this-firefox
+2.  Set your **Master Password**
 
-        Click Load Temporary Add-on → select manifest.json
+3.  Start adding and managing credentials
 
-    First-Time Setup
+# 🧩 Architecture {#architecture .unnumbered}
 
-        Click the TinyVault icon in the browser toolbar
+<figure>
 
-        Set your Master Password
+<figcaption>TinyVault Browser Extension Architecture</figcaption>
+</figure>
 
-        Start adding and managing credentials
+## Components {#components .unnumbered}
 
-🧩 Architecture
+-   **popup.js / popup.html**: Handles the vault UI and user
+    interactions
 
-Code snippet
+-   **sw.js**: Maintains vault state and handles encryption/decryption
+    requests
 
-graph LR
-A[Browser Extension UI] --> B[popup.js / popup.html]
-B --> C[sw.js / crypto.js]
-C --> D[IndexedDB (Encrypted Vault)]
-B --> E[Password Generator]
+-   **crypto.js**: Performs AES-256-GCM encryption/decryption and key
+    derivation
 
-    popup.js / popup.html: Handles the vault UI and user interactions.
+-   **IndexedDB**: Local storage for encrypted credentials
 
-    sw.js: Maintains vault state and handles encryption/decryption requests.
+-   **Password Generator**: Generates strong random passwords
 
-    crypto.js: Performs AES-256-GCM encryption/decryption and key derivation.
+# 💻 Tech Stack {#tech-stack .unnumbered}
 
-    IndexedDB: Local storage for encrypted credentials.
+## Frontend (Browser Extension UI) {#frontend-browser-extension-ui .unnumbered}
 
-    Password Generator: Generates strong random passwords.
+-   Popup UI: Unlock vault, search, and add credentials
 
-💻 Tech Stack
+-   Options Page: Settings like theme or sync options
 
-Frontend (Browser Extension UI)
+-   Content Script (optional): Detects login forms for auto-fill
 
-    Popup UI: Unlock vault, search, and add credentials.
+-   Background Script / Service Worker: Maintains vault state, handles
+    encryption requests
 
-    Options Page: Settings like theme or sync options.
+## Storage {#storage .unnumbered}
 
-    Content Script (optional): Detects login forms for auto-fill.
+-   Local: IndexedDB for storing encrypted credentials
 
-    Background Script / Service Worker: Maintains vault state, handles encryption requests.
+## Security {#security .unnumbered}
 
-Storage
+-   AES-256-GCM encryption
 
-    Local: IndexedDB for storing encrypted credentials.
+-   Key derivation using PBKDF2 / Argon2 / scrypt
 
-Security
+-   Auto-lock and manual lock features
 
-    AES-256-GCM encryption
+# 🚀 Usage {#usage .unnumbered}
 
-    Key derivation using PBKDF2 / Argon2 / scrypt
+1.  Unlock the vault with your **Master Password**
 
-    Auto-lock and manual lock features
+2.  Add new credentials: Website, Username, Password
 
-🚀 Usage
+3.  Generate strong passwords using the built-in Password Generator
 
-    Unlock the vault with your Master Password.
+4.  Use the Lock button to secure the vault immediately
 
-    Add new credentials: Website, Username, Password.
+# 🔒 Security & Best Practices {#security-best-practices .unnumbered}
 
-    Generate strong passwords using the built-in Password Generator.
+-   **Local Encryption Only**: All sensitive data is encrypted locally;
+    nothing leaves your browser
 
-    Use the Lock button to secure the vault immediately.
+-   **AES-256-GCM**: Ensures confidentiality and integrity of
+    credentials
 
-🔒 Security & Best Practices
+-   **Key Derivation**: Your master password generates a strong
+    cryptographic key
 
-    Local Encryption Only: All sensitive data is encrypted locally; nothing leaves your browser.
+-   **Auto-lock**: Automatically locks the vault after inactivity to
+    prevent unauthorized access
 
-    AES-256-GCM: Ensures confidentiality and integrity of credentials.
+# 📂 File Structure {#file-structure .unnumbered}
 
-    Key Derivation: Your master password generates a strong cryptographic key.
-
-    Auto-lock: Automatically locks the vault after inactivity to prevent unauthorized access.
-
-📂 File Structure
-
-TinyVault/
-├── manifest.json         # Browser extension configuration
-├── popup.html            # Vault UI
-├── popup.js              # UI logic
-├── styles.css            # Styling for UI
-├── content.js            # Detects login forms (optional)
-├── sw.js                 # Service worker for vault state
-├── crypto.js             # Encryption and key derivation
-├── idb.js                # IndexedDB wrapper
-├── icons/                # Extension icons (16, 48, 128px)
-└── screenshots/          # Demo screenshots
+    TinyVault/
+    ├── manifest.json        # Browser extension configuration
+    ├── popup.html           # Vault UI
+    ├── popup.js             # UI logic
+    ├── styles.css           # Styling for UI
+    ├── content.js           # Detects login forms (optional)
+    ├── sw.js                # Service worker for vault state
+    ├── crypto.js            # Encryption and key derivation
+    ├── idb.js               # IndexedDB wrapper
+    ├── icons/               # Extension icons (16, 48, 128px)
+    └── screenshots/         # Demo screenshots
